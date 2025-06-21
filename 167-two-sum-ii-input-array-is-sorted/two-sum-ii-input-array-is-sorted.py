@@ -1,7 +1,6 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        n = len(nums)
-        l, r = 0, n-1
+        l, r = 0, len(nums)-1
         while l<r:
             if nums[l]+nums[r] == target:
                 return[l+1, r+1]
