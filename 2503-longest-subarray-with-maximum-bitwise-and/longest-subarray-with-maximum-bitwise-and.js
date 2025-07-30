@@ -11,10 +11,10 @@ var longestSubarray = function(nums) {
         }else if(i == largest){
             count++;
         }else{
-            result = count>result?count:result;
             count=0;
         }
+        
+        result = count>result?count:result;
     }
-    result = count>result?count:result;
     return result
 };
