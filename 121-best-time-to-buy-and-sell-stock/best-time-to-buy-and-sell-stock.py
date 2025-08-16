@@ -1,11 +1,11 @@
 class Solution(object):
     def maxProfit(self, prices):
-        s = prices[0]
-        sol = 0
-        for i in range(1, len(prices)):
-            if prices[i]<s:
-                s = prices[i]
-            elif prices[i]-s>sol:
-                sol = prices[i]-s
-        return sol
+        smallest=0
+        max_val=0
+        for i in range(0, len(prices)):
+            if(prices[i]<prices[smallest]):
+                smallest=i
+            else:
+                max_val=max(max_val, prices[i]-prices[smallest])
+        return max_val
         
